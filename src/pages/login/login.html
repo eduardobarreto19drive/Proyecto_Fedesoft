@@ -14,50 +14,31 @@
 
 <ion-content>
 
-<ion-list>
+  <ion-list>
     <form>
       <ion-item>
         <ion-label floating>Email</ion-label>
-        <ion-input
-          [(ngModel)]="user.email"
-          name="email"
-          type="text"
-          autocapitalize="off"
-          required
-        >
+        <ion-input [(ngModel)]="user.email" name="email" type="text" autocapitalize="off" required>
         </ion-input>
       </ion-item>
 
       <ion-item>
         <ion-label floating>Contraseña</ion-label>
-        <ion-input
-          [(ngModel)]="user.password"
-          name="password"
-          type="password"
-          required
-        >
+        <ion-input [(ngModel)]="user.password" name="password" type="password" required>
         </ion-input>
       </ion-item>
       <div padding>
-        <button
-            ion-button 
-            (click)="login()"
-            type="submit"
-            color="primary"
-            block
-        >
+        <button ion-button (click)="login()" type="submit" color="primary" block>
           Login
         </button>
 
-        <button
-          ion-button 
-          (click)="signin()"
-          type="submit"
-          color="secondary"
-          block
-        >
+        <button ion-button (click)="signin()" type="submit" color="secondary" block>
           Dar de alta
         </button>
+
+        <button ion-button block (click)="cerrarSesion()">Cerrar Sesión
+        </button>
+
       </div>
     </form>
   </ion-list>

@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams, AlertController  } from 'ionic-angular';
+import { IonicPage, NavController, NavParams, AlertController } from 'ionic-angular';
 import { AuthProvider } from '../../providers/auth/auth';
 
 /**
@@ -15,33 +15,50 @@ import { AuthProvider } from '../../providers/auth/auth';
   templateUrl: 'login.html',
 })
 export class LoginPage {
-  user= { email : '', password : ''};
+  user = { email: '', password: '' };
   constructor(
-    public navCtrl: NavController, 
+    public navCtrl: NavController,
     public navParams: NavParams,
-    public auth : AuthProvider,
-    public alertCtrl : AlertController
-    ) {
+    public auth: AuthProvider,
+    public alertCtrl: AlertController
+  ) {
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad LoginPage');
   }
 
-  signin(){
-    this.auth.registerUser(this.user.email,this.user.password)
-    .then((user) => {
-      // El usuario se ha creado correctamente
-    })
-    .catch(err=>{
-      let alert = this.alertCtrl.create({
-        title: 'Error',
-        subTitle: err.message,
-        buttons: ['Aceptar']
-      });
-      alert.present();
-    })
+  signin() {
+    this.auth.registerUser(this.user.email, this.user.password)
+      .then((user) => {
+        // El usuario se ha creado correctamente
+      })
+      .catch(err => {
+        let alert = this.alertCtrl.create({
+          title: 'Error',
+          subTitle: err.message,
+          buttons: ['Aceptar']
+        });
+        alert.present();
+      })
 
   }
 
+  login() {
+    this.auth.loginUser(this.user.email, this.user.password).then((user) => {
+    }
+    )
+      .catch(err => {
+        let alert = this.alertCtrl.create({
+          title: 'Error',
+          subTitle: err.message,
+          buttons: ['Aceptar']
+        });
+        alert.present();
+      })
+  }
+
+  cerrarSesion() {
+    this.auth.logout();
+  }
 }
