@@ -10,8 +10,25 @@ import {ChartPage} from '../pages/chart/chart';
 import {ResultPage} from '../pages/result/result';
 import {MyService} from '../providers/myService';
 
+import { AngularFireModule } from 'angularfire2';
+import { AngularFireDatabaseModule } from 'angularfire2/database';
+import { AngularFireAuthModule } from 'angularfire2/auth';
+
 import {StatusBar} from '@ionic-native/status-bar';
 import {SplashScreen} from '@ionic-native/splash-screen';
+import { AuthProvider } from '../providers/auth/auth';
+
+export const firebaseConfig = {
+    apiKey: "AIzaSyBmnmeHZkhLkXDcqYnwErR1lsPnc4fbr_w",
+    authDomain: "proyectofedesoft-c5d88.firebaseapp.com",
+    databaseURL: "https://proyectofedesoft-c5d88.firebaseio.com",
+    projectId: "proyectofedesoft-c5d88",
+    storageBucket: "proyectofedesoft-c5d88.appspot.com",
+    messagingSenderId: "114101151256"
+  };
+  
+
+
 @NgModule({
     declarations: [
         MyApp,
@@ -23,6 +40,9 @@ import {SplashScreen} from '@ionic-native/splash-screen';
     ],
     imports: [
       BrowserModule,
+      AngularFireModule.initializeApp(firebaseConfig),
+      AngularFireDatabaseModule,
+      AngularFireAuthModule,
       HttpModule,
       IonicModule.forRoot(MyApp, {
             backButtonText: ''
@@ -41,7 +61,8 @@ import {SplashScreen} from '@ionic-native/splash-screen';
     StatusBar,
     SplashScreen,
     MyService,
-    {provide: ErrorHandler, useClass: IonicErrorHandler}
+    {provide: ErrorHandler, useClass: IonicErrorHandler},
+    AuthProvider
   ]
 })
 export class AppModule {
