@@ -1,7 +1,7 @@
 export let IMAGE_BASEURL = "assets/img";
 export let DATA_BASEURL = "assets/data";
 //image
-export let HOME = IMAGE_BASEURL + "/home.jpg";
+export let HOME = IMAGE_BASEURL + "/images.png";
 
 //data
 export let LEVELS = DATA_BASEURL + "/levels.json";
