@@ -10,7 +10,8 @@ import { HomePage } from '../pages/home/home';
   template: `<ion-nav [root]="rootPage"></ion-nav>`
 })
 export class MyApp {
-  rootPage = HomePage;
+  //rootPage = HomePage;
+  rootPage:any = 'LoginPage'; // Luis cambia root page
 
   constructor(platform: Platform, public statusBar: StatusBar,public splashScreen: SplashScreen) {
     platform.ready().then(() => {
