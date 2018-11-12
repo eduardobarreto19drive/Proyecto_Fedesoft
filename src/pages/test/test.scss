@@ -1,0 +1,140 @@
+$testBg: map-get($colors, light);
+
+test .header-md::after {
+  width: 0;
+}
+
+.quizHeader {
+  ion-col {
+    font-size: 1.75rem;
+    padding: 0 1.4rem;
+  }
+  .toolbar-background {
+    background: $testBg;
+    border-style: none;
+  }
+
+  .showIncrementScoreValue {
+    display: inline-flex;
+    animation: scoreUpdate 1.5s;
+    color: green;
+    font-size: 1.2rem;
+    margin-left: 10px;
+  }
+
+  .hideIncrementScoreValue {
+    display: inline-flex;
+    opacity: 0;
+  }
+
+  @keyframes scoreUpdate {
+    0% {
+      opacity: 0;
+    }
+    40% {
+      opacity: 1;
+      transform: translateY(-2px);
+    }
+    90% {
+      opacity: 1;
+      transform: translateY(-3px);
+    }
+    100% {
+      opacity: 0;
+    }
+  }
+}
+
+@function getContrastColor($color1) {
+  @if (lightness($color1) > 75) {
+    @if ((hue($color1) < 233)) {
+      @return black; // Lighter background with lighter hue return dark color
+    } @else {
+      @return white; // Lighter background with darker hue return light color
+    }
+  } @else {
+    @return white; // Darker background, return light color
+  }
+}
+
+.test-page {
+  background: $testBg;
+
+  .progress {
+    background: #efefef;
+    margin: 0 5px 10px;
+    border: 0.20em solid limegreen;
+    border-radius: 10px;
+    .progress-bar {
+      background: limegreen;
+      transition: all 0.3s linear;
+      height: 3px;
+    }
+  }
+
+
+.questions-slide .slide-zoom {
+  height: 100%;
+
+  .que {
+    padding: 0.50rem 0.75rem;
+    background: map-get($colors, primary);
+    border-radius: 20px;
+    color: getContrastColor(map-get($colors, primary));
+    h6 {
+      margin-bottom: 1.6rem;
+    }
+  }
+
+  .answers {
+    position: absolute;
+    bottom: 10%;
+    right: 0;
+    left: 0;
+    .item {
+      background: $testBg;
+      .radio-icon {
+        display: none;
+      }
+    }
+    .item:first-child {
+      border-top: thin solid #dedede;
+    }
+    .item:last-child {
+      border-bottom: thin solid #dedede;
+    }
+    .item.item-radio-checked {
+      background: lighten(map-get($colors, primary), 15);
+    }
+    .item-radio-checked .label {
+       color: black;
+       opacity: 1;
+     }
+  }
+
+  .indicator {
+    display: inline-flex;
+    position: absolute;
+    bottom: 5%;
+    right: 0;
+    left: 0;
+    justify-content: center;
+    ion-icon {
+      padding: 0 0.15rem;
+      font-size: 2rem;
+      color: grey;
+    }
+    .current {
+      color: orange;
+    }
+    .correct {
+      color: green;
+    }
+    .wrong {
+      color: red;
+    }
+  }
+}
+
+}
+

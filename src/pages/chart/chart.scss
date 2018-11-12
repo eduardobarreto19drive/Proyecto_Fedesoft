@@ -1,0 +1,18 @@
+.chart-page-content {
+  background: map-get($colors, primary);
+  .chart1-content {
+    padding-left: 10px;
+  }
+}
+
+.chart2-content{
+  .score {
+    h6{
+      font-weight: bold;
+    }
+    span{
+      font-size: 3.5rem;
+      color: green;
+    }
+  }
+}

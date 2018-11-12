@@ -1,3 +1,37 @@
-page-home {
+home .header-md::after{
+  width: 0;
+}
 
+.frontPageHeader{
+  .toolbar-background{
+    background: white;
+    border-style: none;
+  }
+  .toolbar-ios{
+    padding: 27px 4px;
+  }
+}
+
+.frontPageTitle .toolbar-title{
+  color: map-get($colors,primary);
+  text-align: center;
+  font-size: xx-large;
+  padding-top: 0.75em;
+  font-variant: small-caps;
+  font-family: cursive;
+  font-weight: bold;
+  @media (orientation: portrait) and (max-width: 350px){
+    font-size: x-large;
+  }
+}
+.myFrontImage{
+  width: 100%;
+  height: 100%;
+}
+
+.quizButton{
+  padding: 0.25em 16px;
+  button{
+    border-radius: 20px;
+  }
 }

@@ -1,0 +1,161 @@
+.myheader ion-navbar {
+  .toolbar-content .toolbar-title{
+    color: white;
+  }
+  button{
+    color:white;
+  }
+  .toolbar-background {
+    background: map-get($colors, primary);
+    border-style: none;
+  }
+}
+
+.myPageHeader {
+  min-height: 44px;
+  .toolbar-background {
+    border-color: whitesmoke;
+    background: whitesmoke;
+  }
+  h6 {
+    color: black;
+    text-align: center;
+    margin: 0;
+    font-variant: small-caps;
+  }
+}
+
+.quiz-level {
+  overflow-y: auto;
+}
+
+.myLevels {
+  align-items: flex-start;
+  top: 5.5%;
+  ion-card-header {
+    $color1: lighten(desaturate(adjust-hue(map-get($colors, primary), 33.6486), 46.5116), 20.5882);
+    $color2: lighten(saturate(adjust-hue(map-get($colors, primary), 0.7915), 0.0000), 20.7843);
+    background: linear-gradient(45deg, $color1, $color2);
+  }
+  .card-header-md + .card-content-md {
+    padding-top: 10px;
+  }
+  @media (max-height: 580px) {
+    top: 0;
+  }
+  @media (min-height: 1000px) {
+    align-items: center;
+    top: 0;
+    .level-name {
+      font-size: xx-large;
+      color: map-get($colors, primary);
+    }
+    ion-card {
+      padding: 16px;
+    }
+  }
+}
+
+.grid-gallery {
+  flex-wrap: wrap;
+  justify-content: center;
+  .col-gallery {
+    padding: 10px 5px;
+    @media(orientation: portrait) {
+      max-width: 33%;
+      flex: 0 0 33%;
+    }
+    .all-fabs {
+      width: 5em;
+      height: 5em;
+      background: radial-gradient(circle, #ececec, #bdbdbd);
+      margin: 0 0.80em;
+      color: black;
+      overflow: visible;
+      span {
+        font-size: medium;
+      }
+      @media (min-width: 400px) and (min-height: 730px) {
+        font-size: medium;
+        span {
+          font-size: x-large;
+        }
+      }
+      .mark-badge {
+        position: absolute;
+        top: 0;
+        right: 0;
+        padding: 0.50em;
+        border-radius: 50%;
+        border: 2px solid white;
+      }
+    }
+    @media(min-height: 1000px) {
+      padding: 12.5px 5px;
+      .all-fabs {
+        font-size: x-large;
+        margin: 0 2.2em;
+        span {
+          font-size: xx-large;
+        }
+        .mark-badge {
+          font-size: x-large;
+        }
+      }
+    }
+    //ff8f00
+    .good {
+      background: radial-gradient(circle, white, #5bff5b);
+      ion-badge {
+        background: green;
+      }
+    }
+    .average {
+      background: radial-gradient(circle, white, #ffb74e);
+      ion-badge {
+        background: orange;
+      }
+    }
+    .poor {
+      background: radial-gradient(circle, white, #ff8787);
+      ion-badge {
+        background: firebrick;
+      }
+    }
+  }
+}
+
+.swiper-pagination-bullet {
+  background: map-get($colors, primary);
+}
+
+.loading-content {
+  font-size: 3em;
+  position: absolute;
+  right: 10%;
+  left: -10%;
+  text-align: center;
+}
+
+.alert-md .alert-message {
+  padding-bottom: 5px;
+}
+
+.detailsTable {
+  width: 100%;
+  margin: 1px;
+  border: 1px solid #e5e6e5;
+  td {
+    padding: 0 10px;
+  }
+  .detailsrecord {
+    line-height: 2.5;
+    .leftCol {
+      text-align: left;
+    }
+    .rightCol {
+      text-align: left;
+      color: map-get($colors, primary);
+    }
+  }
+}

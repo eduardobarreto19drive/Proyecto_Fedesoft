@@ -1,0 +1,55 @@
+<ion-content class="result-content">
+
+    <ion-card class="result-circle-card">
+        <ion-card-content>
+            <ion-grid>
+                <ion-row>
+                    <ion-col col-9 text-justify>
+                        Total Questions
+                    </ion-col>
+                    <ion-col col-3 class="show-border" text-center>
+                        {{totalNoOfQuestions}}
+                    </ion-col>
+                </ion-row>
+                <ion-row>
+                    <ion-col col-9 text-justify>
+                        Correct Answer
+                    </ion-col>
+                    <ion-col col-3 class="show-border green" text-center>
+                        {{noOfCorrectAnswer}}
+                    </ion-col>
+                </ion-row>
+                <ion-row>
+                    <ion-col col-9 text-justify>
+                        Wrong Answer
+                    </ion-col>
+                    <ion-col col-3 class="show-border red" text-center>
+                        {{noOfWrongAnswer}}
+                    </ion-col>
+                </ion-row>
+            </ion-grid>
+        </ion-card-content>
+    </ion-card>
+    <div class="circle">
+        <div class="c100 p{{score}}">
+            <span class="text-color">{{score}}% </span>
+            <div class="slice">
+                <div class="bar"></div>
+                <div class="fill"></div>
+            </div>
+        </div>
+    </div>
+
+</ion-content>
+<ion-footer class="result-footer">
+    <ion-toolbar no-shadow>
+        <ion-row>
+            <ion-col>
+                <button ion-button block (click)="viewOverallResult()">Overall Result</button>
+            </ion-col>
+            <ion-col>
+                <button ion-button block (click)="ContinueToNextTest()">Continue</button>
+            </ion-col>
+        </ion-row>
+    </ion-toolbar>
+</ion-footer>

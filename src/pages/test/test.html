@@ -1,0 +1,46 @@
+<ion-header>
+    <ion-toolbar no-border class="quizHeader">
+        <ion-row>
+            <ion-col col-3 text-left>
+                {{score}}
+                <div class="calc-value"
+                     [ngClass]="{'showIncrementScoreValue': displayIncrement == true, 'hideIncrementScoreValue': displayIncrement == false}">
+                    +{{scoreIncrementValue}}
+                </div>
+            </ion-col>
+            <ion-col></ion-col>
+            <ion-col col-3 text-right>
+                <ion-icon name="close" (click)="closeTest()"></ion-icon>
+            </ion-col>
+        </ion-row>
+    </ion-toolbar>
+</ion-header>
+
+
+<ion-content padding-left padding-right class="test-page">
+
+
+    <div class="progress" id="progress">
+        <div class="progress-bar" id="progress-bar"></div>
+    </div>
+
+    <ion-slides #mySlider class="questions-slide">
+        <ion-slide *ngFor="let question of questions">
+           <div class="que"><h6 text-justify>{{question.no}}. {{question.question}} </h6></div>
+            <ion-list class="answers" radio-group>
+                <ion-item *ngFor="let options of question.answers">
+                    <ion-label>{{options.option}}</ion-label>
+                    <ion-radio class="checking" value={{options.optionId}} [disabled]="isDisabled"
+                               (click)="onOptionSelected(options.optionId, question.correctOption)"></ion-radio>
+                </ion-item>
+            </ion-list>
+            <div class="indicator">
+                <div *ngFor="let indicator of questionIndicator">
+                    <ion-icon name="radio-button-on" class="que-open icon-md ion-md-radio-button-on"
+                              [ngClass]="{'current': indicator.id == 0,'correct': indicator.id == 1, 'wrong': indicator.id == 2}">
+                    </ion-icon>
+                </div>
+            </div>
+        </ion-slide>
+    </ion-slides>
+</ion-content>

@@ -1,14 +1,19 @@
-<ion-header>
-  <ion-navbar>
-    <ion-title>
-      Ionic Blank
-    </ion-title>
-  </ion-navbar>
+<ion-header class="frontPageHeader" no-border>
+    <ion-navbar>
+        <ion-title class="frontPageTitle">
+            QuizTime
+        </ion-title>
+    </ion-navbar>
 </ion-header>
 
-<ion-content padding>
-  The world is your oyster.
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will be your guide.
-  </p>
+<ion-content>
+    <img data-src="{{home}}" class="myFrontImage">
+
 </ion-content>
+
+<ion-footer>
+    <div class="quizButton">
+    <button ion-button block (click)="callChart()"> View Result Summary </button>
+    <button ion-button block (click)="startQuiz()">Start Quiz</button>
+    </div>
+</ion-footer>

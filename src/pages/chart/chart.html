@@ -1,0 +1,59 @@
+<ion-header class="myheader">
+    <ion-navbar no-border>
+        <ion-title>Performance</ion-title>
+    </ion-navbar>
+    <ion-toolbar>
+        <ion-segment [(ngModel)]="mylevel">
+            <ion-segment-button value="easy" (ionSelect)="showChart('easy')">
+                Easy
+            </ion-segment-button>
+            <ion-segment-button value="medium" (ionSelect)="showChart('medium')">
+                Medium
+            </ion-segment-button>
+            <ion-segment-button value="hard" (ionSelect)="showChart('hard')">
+                Hard
+            </ion-segment-button>
+        </ion-segment>
+    </ion-toolbar>
+</ion-header>
+
+
+<ion-content class="chart-page-content">
+
+    <!--Displaying line chart with score for each level-->
+    <ion-card>
+        <ion-card-header class="chart1-header">
+            Your Level Scores
+        </ion-card-header>
+        <ion-card-content class="chart1-content">
+            <canvas #canvas1 [hidden]="mylevel != 'easy'"></canvas>
+            <canvas #canvas2 [hidden]="mylevel != 'medium'"></canvas>
+            <canvas #canvas3 [hidden]="mylevel != 'hard'"></canvas>
+        </ion-card-content>
+    </ion-card>
+
+    <!--Displaying average score secured in the each diffculty level-->
+    <ion-card>
+        <ion-card-header class="chart2-header">
+            Your Average Score
+        </ion-card-header>
+        <ion-card-content class="chart2-content">
+            <ion-row  align-items-center>
+                <ion-col col-8>
+                    <canvas #canvas4 [hidden]="mylevel != 'easy'" class="doughnut-chart"></canvas>
+                    <canvas #canvas5 [hidden]="mylevel != 'medium'" class="doughnut-chart"></canvas>
+                    <canvas #canvas6 [hidden]="mylevel != 'hard'" class="doughnut-chart"></canvas>
+                </ion-col>
+                <ion-col col-4 text-center>
+                    <div [hidden]="mylevel != 'easy'" class="score"><h6> Your Score: </h6>
+                        <span> {{easyPercentage}}% </span></div>
+                    <div [hidden]="mylevel != 'medium'" class="score"><h6> Your Score: </h6>
+                        <span>{{mediumPercentage}}% </span></div>
+                    <div [hidden]="mylevel != 'hard'" class="score"><h6> Your Score: </h6>
+                        <span>{{hardPercentage}}% </span></div>
+                </ion-col>
+            </ion-row>
+        </ion-card-content>
+    </ion-card>
+</ion-content>
+
