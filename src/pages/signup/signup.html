@@ -6,7 +6,8 @@
 
 <ion-content>
   <form [formGroup]="myForm" (ngSubmit)="signup()">
-    <ion-list>
+    <ion-list>  
+        
       <ion-item>
         <ion-icon name="person" item-left></ion-icon>
         <ion-label stacked>Email:</ion-label>
@@ -14,12 +15,18 @@
       </ion-item>
       <ion-item>
         <ion-icon name="key" item-left></ion-icon>
-        <ion-label stacked>Password:</ion-label>
+        <ion-label stacked>Contraseña:</ion-label>
         <ion-input formControlName="password" type="password" placeholder="Password"></ion-input>
       </ion-item>
     </ion-list>
     <div padding>
-      <button ion-button block type="submit" [disabled]="!myForm.valid">Register</button>
+      <button ion-button block type="submit" [disabled]="!myForm.valid">Regitrar</button>
+     
     </div>
-  </form>
-</ion-content>
+    <div padding>
+      <button ion-button  block (click)= "exit()">Salir</button>
+    </div>
+  </form> 
+
+
+
