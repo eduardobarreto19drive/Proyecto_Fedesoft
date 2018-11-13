@@ -4,7 +4,7 @@
       "total_completed": 4,
       "difficulty": [
         {
-          "name": "Easy",
+          "name": "Facil",
           "details": [
             {"id":1,"percentage":"100"},
             {"id":2,"percentage":"60"},
@@ -21,7 +21,7 @@
           ]
         },
         {
-          "name" : "Medium",
+          "name" : "Medio",
           "details": [
             {"id":13,"percentage":"100"},
             {"id":14,"percentage":"60"},
@@ -38,7 +38,7 @@
           ]
         },
         {
-          "name" : "Hard",
+          "name" : "Dificil",
           "details": [
             {"id":25,"percentage":"80"},
             {"id":26,"percentage":"60"},
