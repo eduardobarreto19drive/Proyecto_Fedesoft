@@ -18,6 +18,8 @@ import {StatusBar} from '@ionic-native/status-bar';
 import {SplashScreen} from '@ionic-native/splash-screen';
 import { AuthProvider } from '../providers/auth/auth';
 
+
+
 export const firebaseConfig = {
     apiKey: "AIzaSyBmnmeHZkhLkXDcqYnwErR1lsPnc4fbr_w",
     authDomain: "proyectofedesoft-c5d88.firebaseapp.com",

@@ -5,6 +5,7 @@ import { IonicPage, NavController,LoadingController,
 import { AngularFireAuth } from 'angularfire2/auth';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
+
 /**
  * Generated class for the SignupPage page.
  *
@@ -18,7 +19,6 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
   templateUrl: 'signup.html',
 })
 export class SignupPage {
-
   myForm: FormGroup;
   public loading:Loading;
   constructor(
@@ -26,8 +26,9 @@ export class SignupPage {
     public formBuilder: FormBuilder,
     public afAuth: AngularFireAuth, 
     public alertCtrl: AlertController,
-    public loadingCtrl: LoadingController
+    public loadingCtrl: LoadingController,
   ) {
+
     this.myForm = this.formBuilder.group({
       email: ['', Validators.required],
       password: ['', Validators.required]
@@ -38,7 +39,7 @@ export class SignupPage {
 
     console.log("Email:" + this.myForm.value.email);
     console.log("Password:" + this.myForm.value.password);
-   
+    
 
     this.afAuth.auth.createUserWithEmailAndPassword(this.myForm.value.email, this.myForm.value.password)
     .then(
@@ -66,4 +67,9 @@ export class SignupPage {
     
   }
 
+  exit(){
+    this.navCtrl.setRoot('LoginPage');
+  }
+
+  
 }
