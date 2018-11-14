@@ -2,58 +2,57 @@
   "questions": [
     {
       "no": "1",
-      "question": "Which is the coldest location on the Earth",
+      "question": "¿Sabes para qué se utiliza el contenedor rojo?",
       "answers":[
-        {"optionId": "A", "option": "Greenland"},
-        {"optionId": "B", "option": "East Antartica"},
-        {"optionId": "C", "option": "West Antartica"},
-        {"optionId": "D", "option": "Russia"}
+        {"optionId": "A", "option": "Pilas y desechos peligrosos"},
+        {"optionId": "B", "option": "Aceites e insecticidas"},
+        {"optionId": "C", "option": "Las dos respuestas anteriores son correctas"}
       ],
-      "correctOption": "B"
+      "correctOption": "C"
     },
     {
       "no": "2",
-      "question": "Which is the oldest democracy / parliamentary in the world",
+      "question": "¿Cuál de estos colores no pertenece a un contenedor de reciclaje?",
       "answers":[
-        {"optionId": "A", "option": "Russia"},
-        {"optionId": "B", "option": "Germany"},
-        {"optionId": "C", "option": "USA"},
-        {"optionId": "D", "option": "Britain"}
+        {"optionId": "A", "option": "Amarillo"},
+        {"optionId": "B", "option": "Verde"},
+        {"optionId": "C", "option": "Negro"},
+        {"optionId": "D", "option": "Azul"}
       ],
-      "correctOption": "D"
+      "correctOption": "C"
     },
     {
       "no": "3",
-      "question": "Which country is known as land of lilies",
+      "question": "¿Sabes cuánto tarda, de media, en degradarse una botella de plástico?",
       "answers":[
-        {"optionId": "A", "option": "Canada"},
-        {"optionId": "B", "option": "India"},
-        {"optionId": "C", "option": "Britain"},
-        {"optionId": "D", "option": "Russia"}
+        {"optionId": "A", "option": "20 años"},
+        {"optionId": "B", "option": "120 años"},
+        {"optionId": "C", "option": "700 años"},
+        {"optionId": "D", "option": "1 año"}
+      ],
+      "correctOption": "C"
+    },
+    {
+      "no": "4",
+      "question": "¿Sabes a qué contenedor deberías tirar los bricks?",
+      "answers":[
+        {"optionId": "A", "option": "Amarillo"},
+        {"optionId": "B", "option": "Verde"},
+        {"optionId": "C", "option": "Azul"},
+        {"optionId": "D", "option": "Negro"}
       ],
       "correctOption": "A"
     },
     {
-      "no": "4",
-      "question": "Which is the brightest planet in solar system",
+      "no": "5",
+      "question": "¿De qué color es el contenedor destinado al reciclaje del papel y el cartón?",
       "answers":[
-        {"optionId": "A", "option": "Mercury"},
-        {"optionId": "B", "option": "Venus"},
-        {"optionId": "C", "option": "Jupiter"},
-        {"optionId": "D", "option": "Saturn"}
+        {"optionId": "A", "option": "Rojo"},
+        {"optionId": "B", "option": "Azul"},
+        {"optionId": "C", "option": "Naranja"},
+        {"optionId": "D", "option": "Negro"}
       ],
       "correctOption": "B"
-    },
-    {
-      "no": "5",
-      "question": "World first University is located in which country",
-      "answers":[
-        {"optionId": "A", "option": "USA"},
-        {"optionId": "B", "option": "Germany"},
-        {"optionId": "C", "option": "India"},
-        {"optionId": "D", "option": "Britain"}
-      ],
-      "correctOption": "C"
     }
   ]
 }
