@@ -1,10 +1,10 @@
 import {Component} from '@angular/core';
 import {NavController} from 'ionic-angular';
 
-import {QuizLevelPage} from "../quiz-level/quiz-level";
-import {ChartPage} from '../chart/chart';
-
+//import {QuizLevelPage} from "../quiz-level/quiz-level";
+//import {ChartPage} from '../chart/chart';
 import {HOME} from '../../providers/constant';
+
 
 
 @Component({
@@ -19,12 +19,12 @@ export class HomePage {
         this.home = HOME;
     }
 
-    startQuiz() {
-        this.navCtrl.push(QuizLevelPage);
+    registrarse() {
+        this.navCtrl.push('SignupPage');
     }
 
-    callChart() {
-        this.navCtrl.push(ChartPage);
+    iniciar() {
+        this.navCtrl.push('LoginPage');
     }
 
 }

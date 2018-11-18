@@ -4,6 +4,7 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { AngularFireAuth } from 'angularfire2/auth';
 import * as firebase from 'firebase/app';
 import { Observable } from 'rxjs/Observable';
+import {QuizLevelPage} from "../quiz-level/quiz-level";
 
 
 /**
@@ -46,6 +47,7 @@ export class LoginPage {
     this.afAuth.auth.signInWithEmailAndPassword(this.myForm.value.email, this.myForm.value.password).then(() => {
       console.log("User logging");
       //this.navCtrl.setRoot("HomePage");
+      this.navCtrl.push(QuizLevelPage);
     }, (err) => {
       this.loading.dismiss().then( () => {
         let alert = this.alertCtrl.create({
