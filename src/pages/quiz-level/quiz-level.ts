@@ -48,14 +48,14 @@ export class QuizLevelPage {
     //Showing test details
     showTestAlert(questions){
         let alert = this.alertCtrl.create({
-            title: 'Quiz Details',
+            title: 'Detalles',
             message: `<table class="detailsTable">` +
-                      `<tr class="detailsrecord"><td class="leftCol">No of Questions</td><td class="rightCol">`+questions.length+`</td></tr>`+
-                      `<tr class="detailsrecord"><td class="leftCol">Time/Question</td><td class="rightCol">3s</td></tr>`+
-                      `<tr class="detailsrecord"><td class="leftCol">Points/Question</td><td class="rightCol">20</td></tr>`+
+                      `<tr class="detailsrecord"><td class="leftCol">numero de preguntas</td><td class="rightCol">`+questions.length+`</td></tr>`+
+                      `<tr class="detailsrecord"><td class="leftCol">tiempo por pregunta</td><td class="rightCol">3s</td></tr>`+
+                      `<tr class="detailsrecord"><td class="leftCol">puntos por pregunta</td><td class="rightCol">20</td></tr>`+
                       `</table>`,
             buttons: [{
-                text: 'Start Quiz',
+                text: 'Empezar',
                 handler: ()=>{
                     this.startTimerLoading(questions);
                 }
