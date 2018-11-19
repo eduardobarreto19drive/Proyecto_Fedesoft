@@ -4,7 +4,7 @@ home .header-md::after{
 
 .frontPageHeader{
   .toolbar-background{
-    background: white;
+    background: rgb(182, 57, 57);
     border-style: none;
   }
   .toolbar-ios{
@@ -31,12 +31,24 @@ home .header-md::after{
   height: 70%;
 }
 
-.quizButton{
+.buttons{
   padding: 0.25em 16px;
-  margin-bottom: 100px;
-  button{
-    border-radius: 10px;
-    margin-bottom: 10px;
-    font-size: 1em;
+  margin-bottom: 15px;
+  
+  button
+  {
+    border-radius: 100px;
+    font-family: 'Trebuchet MS';
+    background-image:url(../../assets/img/fondoMarron.jpg);
+    background-size: cover; 
   }
 }
+  .homeBackground {
+    background-image: url(../../assets/img/Inicio.png);
+    background-repeat: no-repeat;
+    background-size: cover; 
+  } 
+  .icon {
+    font-size: 50px;
+    color: rgb(29, 86, 43);
+    }
