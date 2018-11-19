@@ -1,20 +1,23 @@
 <ion-header class="frontPageHeader" no-border>
-    <ion-navbar>
+ <!--   <ion-navbar>
         <ion-title class="frontPageTitle">
         </ion-title>
     </ion-navbar>
+    -->
 </ion-header>
-
-<ion-content>
-    <img data-src="{{home}}" class="myFrontImage">
-</ion-content>
-
-<ion-footer>
-    <div class="quizButton">
-    <!--<button ion-button block (click)="callChart()"> Mira tus resultados </button> 
-    <button ion-button block (click)="startQuiz()">Empieza</button>-->
-    <button ion-button block (click)="registrarse()">Registrarse</button>
-    <button ion-button block (click)="iniciar()"> Iniciar Sesion</button> 
-    
-    </div>
+<ion-content  class="homeBackground" >    
+  </ion-content>
+<ion-footer class="buttons">    
+  <div text-center align-items-center> 
+    <button ion-button icon-start color="light" (click)="registrarse()">
+            <ion-icon name="person-add"></ion-icon>
+            <label>Registrarse</label>
+    </button>
+  </div>    
+  <div text-center align-items-center> 
+    <button ion-button icon-start color="light" (click)="iniciar()" >
+            <ion-icon name="home"></ion-icon>
+            <label>Inicia sesión</label>
+    </button>
+  </div>   
 </ion-footer>
