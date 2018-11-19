@@ -1,17 +1,17 @@
 <ion-header class="myheader">
     <ion-navbar no-border>
-        <ion-title>Performance</ion-title>
+        <ion-title>Avances</ion-title>
     </ion-navbar>
     <ion-toolbar>
         <ion-segment [(ngModel)]="mylevel">
             <ion-segment-button value="easy" (ionSelect)="showChart('easy')">
-                Easy
+                Facil
             </ion-segment-button>
             <ion-segment-button value="medium" (ionSelect)="showChart('medium')">
-                Medium
+                Medio   
             </ion-segment-button>
             <ion-segment-button value="hard" (ionSelect)="showChart('hard')">
-                Hard
+                Dificil
             </ion-segment-button>
         </ion-segment>
     </ion-toolbar>
@@ -23,7 +23,7 @@
     <!--Displaying line chart with score for each level-->
     <ion-card>
         <ion-card-header class="chart1-header">
-            Your Level Scores
+            Puntaje Por Nivel
         </ion-card-header>
         <ion-card-content class="chart1-content">
             <canvas #canvas1 [hidden]="mylevel != 'easy'"></canvas>
@@ -35,7 +35,7 @@
     <!--Displaying average score secured in the each diffculty level-->
     <ion-card>
         <ion-card-header class="chart2-header">
-            Your Average Score
+            Tu Puntaje Promedio
         </ion-card-header>
         <ion-card-content class="chart2-content">
             <ion-row  align-items-center>
@@ -45,11 +45,11 @@
                     <canvas #canvas6 [hidden]="mylevel != 'hard'" class="doughnut-chart"></canvas>
                 </ion-col>
                 <ion-col col-4 text-center>
-                    <div [hidden]="mylevel != 'easy'" class="score"><h6> Your Score: </h6>
+                    <div [hidden]="mylevel != 'easy'" class="score"><h6> Tu Puntaje: </h6>
                         <span> {{easyPercentage}}% </span></div>
-                    <div [hidden]="mylevel != 'medium'" class="score"><h6> Your Score: </h6>
+                    <div [hidden]="mylevel != 'medium'" class="score"><h6> Tu Puntaje: </h6>
                         <span>{{mediumPercentage}}% </span></div>
-                    <div [hidden]="mylevel != 'hard'" class="score"><h6> Your Score: </h6>
+                    <div [hidden]="mylevel != 'hard'" class="score"><h6> Tu Puntaje: </h6>
                         <span>{{hardPercentage}}% </span></div>
                 </ion-col>
             </ion-row>
