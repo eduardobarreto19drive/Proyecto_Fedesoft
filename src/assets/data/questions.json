@@ -23,18 +23,18 @@
     },
     {
       "no": "3",
-      "question": "¿Sabes cuánto tarda, de media, en degradarse una botella de plástico?",
+      "question": "¿Como reciclo las bombillas?",
       "answers":[
-        {"optionId": "A", "option": "20 años"},
-        {"optionId": "B", "option": "120 años"},
-        {"optionId": "C", "option": "700 años"},
-        {"optionId": "D", "option": "1 año"}
+        {"optionId": "A", "option": "En el contenedor verde"},
+        {"optionId": "B", "option": "En el contenedor amarillo"},
+        {"optionId": "C", "option": "En contenedores especificos"},
+        {"optionId": "D", "option": "Ninguna de las anteriores"}
       ],
       "correctOption": "C"
     },
     {
       "no": "4",
-      "question": "¿Sabes a qué contenedor deberías tirar los bricks?",
+      "question": "¿Sabes a qué contenedor deberías tirar los encendedores?",
       "answers":[
         {"optionId": "A", "option": "Amarillo"},
         {"optionId": "B", "option": "Verde"},

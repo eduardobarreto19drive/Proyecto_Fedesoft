@@ -50,9 +50,9 @@ export class QuizLevelPage {
         let alert = this.alertCtrl.create({
             title: 'Detalles',
             message: `<table class="detailsTable">` +
-                      `<tr class="detailsrecord"><td class="leftCol">numero de preguntas</td><td class="rightCol">`+questions.length+`</td></tr>`+
-                      `<tr class="detailsrecord"><td class="leftCol">tiempo por pregunta</td><td class="rightCol">3s</td></tr>`+
-                      `<tr class="detailsrecord"><td class="leftCol">puntos por pregunta</td><td class="rightCol">20</td></tr>`+
+                      `<tr class="detailsrecord"><td class="leftCol">Número de preguntas</td><td class="rightCol">`+questions.length+`</td></tr>`+
+                      `<tr class="detailsrecord"><td class="leftCol">Tiempo por pregunta</td><td class="rightCol">3s</td></tr>`+
+                      `<tr class="detailsrecord"><td class="leftCol">Puntos por pregunta</td><td class="rightCol">20</td></tr>`+
                       `</table>`,
             buttons: [{
                 text: 'Empezar',
